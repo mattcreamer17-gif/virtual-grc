@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A read on where AI fits in the Virtual GRC stack | Prepared for Virtual GRC</title>
+<meta name="description" content="You're running eMerge booth 1246 again, same as last March. The site leads on AI-driven compliance across eight frameworks including ISO 42001. A hypothesis about what breaks in the template library when the frameworks drift." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Virtual GRC">
+      <img src="logo.png" alt="Virtual GRC" class="brand-logo" />
+    </a>
+    <nav class="top-nav" aria-label="Primary">
+      <a href="#thesis">Thesis</a>
+      <a href="#orchestration">Orchestration</a>
+      <a href="#proof">Proof</a>
+      <a href="#methodology">Methodology</a>
+      <a class="nav-cta" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">Book 30 min</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        Prepared for <strong>Jose Melendez</strong> and the Virtual GRC team. eMerge Americas 2026, Booth 1246.
+      </div>
+      <h1 class="h1">
+        A read on where AI fits in the Virtual GRC stack, and where it does not.
+      </h1>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="hero-sub">
+        Eight frameworks. Ten people. One template library that has to hold the <span class="kw">AI-DRIVEN</span> claim together when an auditor asks for specifics.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+          Book 30 minutes with Matt
+        </a>
+        <a class="btn btn-ghost" href="#thesis">Read the hypothesis</a>
+      </div>
+
+      <dl class="hero-meta">
+        <div>
+          <dt>Frameworks in scope</dt>
+          <dd>CMMC 2.0, SOC 2, ISO 27001, NIST 800-171, HIPAA, PCI-DSS, GDPR, ISO 42001</dd>
+        </div>
+        <div>
+          <dt>The question</dt>
+          <dd>Which of your features are AI, which are rules, which are plain code.</dd>
+        </div>
+        <div>
+          <dt>Prepared by</dt>
+          <dd>Eduba. Computational orchestration for AI-adjacent products.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section section-thesis" id="thesis">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-index">01</div>
+        <div>
+          <p class="kicker">The opening</p>
+          <h2 class="h2">You built this on 20+ years of GRC work, then packaged it as vGRCNOW.</h2>
+        </div>
+      </div>
+
+      <div class="prose">
+        <p>
+          The platform now covers eight frameworks including ISO 42001. The 2025 eMerge booth led on CMMC preparedness for the defense industrial base. The marketing calls the product AI-driven. A procurement team at a DoD prime will ask what that actually means, and the answer has to hold up in writing.
+        </p>
+        <p class="lede">
+          Most GRC products that lead on AI are solving three different problems at the same time, and treating them as one feature.
+        </p>
+      </div>
+
+      <div class="tri-grid">
+        <article class="tri-card">
+          <div class="tri-tag">Problem 1</div>
+          <h3>Policy drafting</h3>
+          <p>This is a generative AI problem. A model writes text against a control. Humans edit. The loop is familiar and well-understood.</p>
+        </article>
+        <article class="tri-card">
+          <div class="tri-tag">Problem 2</div>
+          <h3>Evidence matching</h3>
+          <p>This is a rules-and-retrieval problem. The control exists. The evidence exists. The work is tying them together with provenance.</p>
+        </article>
+        <article class="tri-card">
+          <div class="tri-tag">Problem 3</div>
+          <h3>Gap analysis</h3>
+          <p>This is a structured-scoring problem. Controls have criteria. Criteria have weights. A model is not the right tool for half the judgments.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-layers" id="orchestration">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-index">02</div>
+        <div>
+          <p class="kicker">The 60 / 30 / 10 view</p>
+          <h2 class="h2">Most of what lives under an AI-driven compliance product is not AI.</h2>
+        </div>
+      </div>
+
+      <div class="layer-stack" role="list">
+        <div class="layer layer-60" role="listitem">
+          <div class="layer-left">
+            <span class="layer-pct">60%</span>
+            <span class="layer-label">Traditional code and database queries</span>
+          </div>
+          <p class="layer-body">Policy storage, user roles, audit logs, evidence versioning, access reviews. Postgres does this faster, cheaper, and with better guarantees than any LLM.</p>
+        </div>
+        <div class="layer layer-30" role="listitem">
+          <div class="layer-left">
+            <span class="layer-pct">30%</span>
+            <span class="layer-label">Rule-based logic against framework controls</span>
+          </div>
+          <p class="layer-body">CMMC 2.0 has 110 controls. NIST 800-171 has 110. The mapping between them is deterministic. A rules engine makes this legible to an auditor. A model muddies it.</p>
+        </div>
+        <div class="layer layer-10" role="listitem">
+          <div class="layer-left">
+            <span class="layer-pct">10%</span>
+            <span class="layer-label">Genuine AI where model judgment adds value</span>
+          </div>
+          <p class="layer-body">Novel policy language. Control-to-evidence semantic matching across ambiguous documents. ISO 42001 narrative reviews. This is the real AI surface.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p class="callout-lead">A clean orchestration layer makes each layer legible.</p>
+        <p>Legible to your team. Legible to your customer's auditor. Legible to the ISO 42001 reviewer who will eventually show up. This is the consulting we do. A one-week audit of the orchestration layer, a map of which features belong on which layer, and a short list of what to rebuild and what to leave alone.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-proof" id="proof">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-index">03</div>
+        <div>
+          <p class="kicker">Case study</p>
+          <h2 class="h2">VigilOre is a different vertical. The problem shape is the same.</h2>
+        </div>
+      </div>
+
+      <div class="proof-grid">
+        <div class="proof-card proof-hero">
+          <div class="proof-meta">Multi-agent compliance platform. DRC mining operations.</div>
+          <div class="proof-headline">
+            <span class="proof-before">160+ hours</span>
+            <span class="proof-arrow" aria-hidden="true">to</span>
+            <span class="proof-after">under 5 min</span>
+          </div>
+          <p class="proof-body">
+            Before Eduba, 160+ hours of compliance work per cycle. After the orchestration-layer design and ICM implementation, under 5 minutes with the audit trail intact and each agent's role documented. Scoped engagement, methodology transfer, ongoing advisory.
+          </p>
+        </div>
+
+        <div class="proof-stack">
+          <div class="proof-item">
+            <div class="proof-kicker">Correlation One // Pacific Life, Colgate-Palmolive</div>
+            <p>1,500+ people trained since May 2025. 6,000 to 9,000 hours saved per year. 95% 30-day adoption.</p>
+          </div>
+          <div class="proof-item">
+            <div class="proof-kicker">KPMG UK, one of the Big Four</div>
+            <p>40+ executives trained. Regulated-industry, leadership-level audience. The compliance-heavy posture you sell into every day.</p>
+          </div>
+          <div class="proof-item">
+            <div class="proof-kicker">NLP Logix partnership</div>
+            <p>NLP Logix has been in machine learning since 2011 and runs over 150 data scientists. Eduba routes to them for work that sits below the orchestration layer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-methodology" id="methodology">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-index">04</div>
+        <div>
+          <p class="kicker">Methodology</p>
+          <h2 class="h2">Your template library is a perfect ICM use case.</h2>
+        </div>
+      </div>
+
+      <div class="methodology-grid">
+        <article class="methodology-card">
+          <div class="card-tag">Paper</div>
+          <h3>Interpretable Context Methodology</h3>
+          <p>Organize agent context as a layered filesystem with measurable interpretability. Translates directly into how your templates and AI features explain themselves to an auditor.</p>
+          <ul class="card-links">
+            <li><a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">Repository</a></li>
+            <li><span class="muted">Submitted to ACM TiiS</span></li>
+          </ul>
+        </article>
+
+        <article class="methodology-card">
+          <div class="card-tag">Adjacent</div>
+          <h3>Ethics Engine</h3>
+          <p>A psychometric assessment tool for evaluating ideological and moral patterns in LLMs. Relevant if the conversation turns to ISO 42001 and AI management systems.</p>
+          <ul class="card-links">
+            <li><a href="https://arxiv.org/abs/2510.11742" target="_blank" rel="noopener">arXiv paper</a></li>
+            <li><a href="https://github.com/RinDig/AuditEngine" target="_blank" rel="noopener">AuditEngine repository</a></li>
+          </ul>
+        </article>
+
+        <article class="methodology-card">
+          <div class="card-tag">The author</div>
+          <h3>Jake Van Clief</h3>
+          <p>Marine Corps veteran. MSc Future Governance, Edinburgh. Published in ACM TiiS and arXiv. 1,500+ people trained across enterprise engagements since May 2025. Jake also built an online community to 22,000 members in 5 weeks.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cta">
+    <div class="container cta-inner">
+      <p class="kicker cta-kicker">Next step</p>
+      <h2 class="h2 cta-h2">
+        30 minutes with Matt Creamer.
+      </h2>
+      <p class="cta-body">
+        Bring one thing inside vGRCNOW that you would rather an auditor not have to squint at. We will map where it sits on the orchestration layer and describe what a clean version looks like. Founder-to-founder call. No deck.
+      </p>
+      <a class="btn btn-primary btn-lg" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+        Book 30 minutes
+      </a>
+      <p class="cta-link">
+        <a href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">calendly.com/thecro-eduba/30min</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-prepared">
+      <span class="footer-label">Prepared by Eduba</span>
+      <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a>
+    </div>
+    <div class="footer-note">
+      Built for Virtual GRC ahead of eMerge Americas 2026, Booth 1246. The research, the pitch, and this page are specific to your product and your market posture. Not a template.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
